@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu RESPONSIVO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+
+    <style>
+        *{ 
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .menu{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background: grey;
+           
+        }
+
+        nav ul { 
+            text-transform: capitalize;
+            display: flex;
+            color: black;
+            gap: 25px;
+            list-style: none;
+        }
+
+        nav ul li a  { 
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        #burguer{ 
+            display: none;
+        }
+
+
+        @media (max-width: 768px) {
+
+            #burguer{ 
+                display: block;
+                margin-right: 48%;
+                cursor: pointer;
+            }
+
+            nav ul{ 
+                display: flex;
+                position: absolute;
+                top: 58px;
+                flex-direction: column;
+                background-color: grey;
+                width: 100%;
+                left: 0px;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            nav ul :hover{
+                color: white;
+            }
+
+
+
+
+
+        }
+
+
+
+    </style>
+
+<body>
+    <header>
+        <nav class="menu">
+
+            <div>
+                <h1>LOGO</h1>
+            </div>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">contaos</a></li>
+                <li><a href="#">informações</a></li>
+                <li><a href="#">localização</a></li>
+            </ul>
+
+            <span class="material-symbols-outlined" id="burguer">
+                menu
+                </span>
+
+
+
+        </nav>
+
+
+
+
+    </header>
+</body>
+</html>

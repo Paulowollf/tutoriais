@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU RESPONSIVO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<style>
+
+    *{ 
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+    }
+
+
+    .bola{
+        display: flex;
+        justify-content: space-between;
+        background-color: blueviolet;
+        text-transform: uppercase;
+        padding: 1rem;
+        
+    }
+
+    nav ul { 
+        
+        display: flex;
+        gap: 25px;
+        list-style: none;
+
+    }
+
+    nav ul li a { 
+        text-decoration: none;
+    }
+
+    #menu{ 
+        display: none;
+    } 
+
+    @media (max-width:768px) {
+
+        #menu{
+            display: block;
+            cursor: pointer;
+            margin-right: 48%;
+        }
+
+        .bola ul { 
+            display: flex;
+            position: absolute;
+            top: 60px;
+            background-color: blueviolet;
+            flex-direction: column;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            left: -100%;
+        
+        
+        }
+
+       nav ul { 
+            left: 0px;
+        }
+    }
+
+</style>
+
+<body>
+    <header>
+
+        <nav class="bola">
+            <div>
+                <h1>LOGO</h1>
+            </div>
+           
+            
+            <ul class="bolaopen" >
+              
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">COntato</a></li>
+                <li><a href="#">informações</a></li>
+                <li><a href="#">localização</a></li>
+
+            </ul>
+
+
+            <span class="material-symbols-outlined" id="menu" onclick='menuShow()'>
+                menu
+                </span>
+
+        </nav>
+ 
+
+    </header>
+
+
+    <script>
+        function menuShow(){ 
+            let ul = document.querySelector ('.bola ul'); 
+
+            if (ul.classlist.contains("open")) { 
+                ul.classList.remove("open");
+
+            } else { 
+                ul.classList.add("open");
+            }
+
+                
+
+
+        }
+
+
+
+    </script>
+
+</body>
+</html>
